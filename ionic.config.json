@@ -1,0 +1,7 @@
+{
+  "name": "prodd-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
