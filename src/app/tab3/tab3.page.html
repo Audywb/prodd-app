@@ -1,17 +1,72 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      <img src="../../assets/proddLogo.png" alt="">
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="dark">
+       <ion-icon slot="icon-only" name="log-in-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
+      <ion-title size="large">proDD</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-searchbar placeholder="ค้นหา"></ion-searchbar>
+
+  <!-- คูปอง -->
+<div>
+  <ion-item no-padding lines="none">
+    <ion-avatar slot="start">
+      <img src="../../assets/nike.jpg">
+    </ion-avatar>
+    <ion-label>nike_shop</ion-label>
+    <ion-icon slot="end" name="ellipsis-vertical"></ion-icon>
+  </ion-item>
+
+  <img class="post_img" src="../../assets/nike_post1.jpg">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="8">
+        <p class="insta-text"><b>I just wanna pen fan your dai bo?</b> Oh my goodnessBaby I love you, my heart demandsrang loudly inside that. </p>
+      </ion-col>
+      <ion-col>
+        <ion-button>กดรับคูปอง</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+<br>
+</div>
+<!-- -------------- -->
+ <!-- คูปอง -->
+ <div>
+  <ion-item no-padding lines="none">
+    <ion-avatar slot="start">
+      <img src="../../assets/apple.jpg">
+    </ion-avatar>
+    <ion-label>apple</ion-label>
+    <ion-icon slot="end" name="ellipsis-vertical"></ion-icon>
+  </ion-item>
+
+  <img class="post_img" src="../../assets/iphone_post1.jpg">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="8">
+        <p class="insta-text"><b>I just wanna pen fan your dai bo?</b> Oh my goodnessBaby I love you, my heart demandsrang loudly inside that. </p>
+      </ion-col>
+      <ion-col>
+        <ion-button>กดรับคูปอง</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+<br>
+</div>
+<!-- -------------- -->
+
 </ion-content>

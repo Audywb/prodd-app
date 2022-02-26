@@ -1,0 +1,42 @@
+ion-header img {
+  height: 47px;
+  margin-top: 4px;
+  }
+
+ion-avatar{
+  background-image: url('../../assets/instagram-bg-color.jpg');
+  background-size: contain;
+  padding: 2px;
+  margin: 5px;
+  height: 30px;
+  width: 30px;
+}
+
+ion-avatar img {
+    border: 2px solid white;
+}
+
+ion-label {
+  font-size: 14px!important;
+  font-weight: 700;
+  color: #1e2023!important;
+  margin-left: 5px;
+}
+
+.post_img {
+  width: 100%;
+}
+
+.insta-text {
+  font-size: 13px;
+  margin: 0px 6px 4px 6px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+ion-button{
+  --background: #FF37A3;
+}
