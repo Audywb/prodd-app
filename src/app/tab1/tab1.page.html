@@ -4,9 +4,16 @@
       <img src="../../assets/proddLogo.png" alt="">
     </ion-title>
     <ion-buttons slot="end">
-      <ion-button color="dark">
+      <!-- log out -->
+      <!-- <ion-button color="dark" *ngIf="!isLoggedIn" (click)="logout()">
        <ion-icon slot="icon-only" name="log-in-outline"></ion-icon>
-      </ion-button>
+      </ion-button> -->
+
+      <!-- login -->
+      <ion-button color="dark"  *ngIf="!isLoggedIn" href="/login">
+        <ion-icon slot="icon-only" name="log-in"></ion-icon>
+       </ion-button>
+
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -92,7 +99,7 @@
   </ion-item>
 
   <img class="post_img" src="../../assets/iphone_post1.jpg">
-  <p class="insta-text"><b>iPhone 13 ราคานักศีกษา ไม่มีบัตรเครดิตก็ผ่อนได้</b> 
+  <p class="insta-text"><b>iPhone 13 ราคานักศีกษา ไม่มีบัตรเครดิตก็ผ่อนได้</b>
     iPhone 13 ราคานักศีกษา ไม่มีบัตรเครดิตก็ผ่อนได้ จอง iPhone 13 ทุกรุ่น คุ้มที่สุด ได้ที่ U.Store by Comseven ทุกสาขา ข้อเสนอสำหรับนักศึกษา เริ่มต้นเพียง 1,081.-/ด* ผ่อนยาว 0% นาน 36 เดือน สิทธิพิเศษมากกว่าเมื่อชำระเต็มจำนวน จองสินค้าและชำระด้วย UFund • ดาวน์เริ่มต้นเพียง 10% ของราคาสินค้า • ผ่อนได้นานสูงสุด 18 เดือน </p>
 <br>
 

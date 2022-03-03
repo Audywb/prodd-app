@@ -18,6 +18,19 @@
     </ion-toolbar>
   </ion-header>
 
-  
+  <ion-list>
+      <ion-card *ngFor="let pro2 of Promotions">
+        <ion-item>
+          <ion-icon slot="end" name="ellipsis-vertical"></ion-icon>
+          <ion-label><h2>{{pro2.title}}</h2></ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          <img class="post_img" src={{pro2.img_url}}/>&nbsp;&nbsp;&nbsp;
+          <p>{{pro2.description}}</p>
+        </ion-card-content>
+      </ion-card>
+
+  </ion-list>
 
 </ion-content>

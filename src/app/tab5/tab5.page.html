@@ -1,58 +1,66 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      <img src="../../assets/proddLogo.png" alt="">
+      <img src="../../assets/proddLogo.png" alt="" />
     </ion-title>
-    <ion-buttons slot="end">
-      <ion-button color="dark">
-       <ion-icon slot="icon-only" name="log-in-outline"></ion-icon>
-      </ion-button>
+    <ion-buttons slot="end" >
+      <ion-button color="dark" *ngIf="isLoggedIn" (click)="logout()">
+        <ion-icon slot="icon-only" name="log-in-outline"></ion-icon>
+       </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">proDD</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <div class="ion-text-center">
-  <ion-item no-padding lines="none" >
-    <ion-avatar class="image-center">
-      <img src="../../assets/EimiFukada.jpg">
-    </ion-avatar>
-  </ion-item>
-  <br>
-  <ion-label>Eimi Fukada</ion-label>
-</div>
-<hr>
-<ion-text>
-  <h4>คูปองของฉัน</h4>
-</ion-text>
+  <div *ngIf="currentUser; else loggedOut">
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <ion-title size="large">proDD</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <div class="ion-text-center">
+      <ion-item no-padding lines="none">
+        <ion-avatar class="image-center">
+          <img src={{currentUser.profile_url}} />
+        </ion-avatar>
+      </ion-item>
+      <br />
+      <ion-label>{{ currentUser.username }}</ion-label><br/>
+      <ion-label>{{ currentUser.email }}</ion-label><br/>
+      <ion-label>{{ currentUser.id }}</ion-label><br/>
+      <ion-label>{{ currentUser.roles }}</ion-label>
 
-<div class="coupon">
-<ion-row>
-  <ion-col class="ion-align-self-start">
-    <img class="coupon_img" src="../../assets/nike_post1.jpg">
-  </ion-col>
+    </div>
+  </div>
 
-  <ion-col class="ion-align-self-end">
-    <img class="coupon_img" src="../../assets/iphone_post1.jpg">
-  </ion-col>
+  <ng-template #loggedOut> Please login. </ng-template>
 
-</ion-row>
+  <ion-button routerLink="/promo-display"  *ngIf="isAdmin && isLoggedIn"> dashboard</ion-button>
 
-<ion-row>
-  <ion-col class="ion-align-self-start">
-    <img class="coupon_img" src="../../assets/iphone_post1.jpg">
-  </ion-col>
+  <hr />
+  <ion-text>
+    <h4>คูปองของฉัน</h4>
+  </ion-text>
 
-  <ion-col class="ion-align-self-end">
-    <img class="coupon_img" src="../../assets/nike_post1.jpg">
-  </ion-col>
+  <div class="coupon">
+    <ion-row>
+      <ion-col class="ion-align-self-start">
+        <img class="coupon_img" src="../../assets/nike_post1.jpg" />
+      </ion-col>
 
-</ion-row>
+      <ion-col class="ion-align-self-end">
+        <img class="coupon_img" src="../../assets/iphone_post1.jpg" />
+      </ion-col>
+    </ion-row>
 
-</div>
+    <ion-row>
+      <ion-col class="ion-align-self-start">
+        <img class="coupon_img" src="../../assets/iphone_post1.jpg" />
+      </ion-col>
+
+      <ion-col class="ion-align-self-end">
+        <img class="coupon_img" src="../../assets/nike_post1.jpg" />
+      </ion-col>
+    </ion-row>
+  </div>
 </ion-content>
